@@ -1,0 +1,126 @@
+Disease_ID,Disease_Name,Doctor_Type_ID,Doctor_Type_Name
+1,Common Cold,1,General Practitioner
+2,Seasonal Allergies,2,Allergist
+3,Acid Reflux,3,Gastroenterologist
+4,Mild Gastritis,3,Gastroenterologist
+5,Muscle Strain,4,Orthopedic Specialist
+6,Mild Anxiety,5,Psychiatrist
+7,Tension Headache,6,Neurologist
+8,Common Skin Rash,7,Dermatologist
+9,Influenza (Flu),1,General Practitioner
+10,Minor Injury,4,Orthopedic Specialist
+11,Gastroesophageal Reflux Disease (GERD),3,Gastroenterologist
+12,Sinusitis,1,General Practitioner
+13,Urinary Tract Infection (UTI),8,Urologist
+14,Sprained Ankle,4,Orthopedic Specialist
+15,Ear Infection,9,ENT Specialist
+16,Plantar Fasciitis,4,Orthopedic Specialist
+17,Gastroenteritis,3,Gastroenterologist
+18,Allergic Rhinitis,2,Allergist
+19,Mild Insomnia,5,Psychiatrist
+20,Mild Depression,5,Psychiatrist
+21,Mild Sunburn,7,Dermatologist
+22,Hemorrhoids,3,Gastroenterologist
+23,Irritable Bowel Syndrome (IBS),3,Gastroenterologist
+24,Mild Vertigo,6,Neurologist
+25,Seasonal Flu,1,General Practitioner
+26,Mild Eczema,7,Dermatologist
+27,Back Strain,4,Orthopedic Specialist
+28,Mild Asthma,10,Pulmonologist
+29,Stress-induced Headache,6,Neurologist
+30,Mild Acne,7,Dermatologist
+31,Shin Splints,4,Orthopedic Specialist
+32,Mild Allergic Reaction,2,Allergist
+33,Minor Sunburn,7,Dermatologist
+34,Mild Food Poisoning,3,Gastroenterologist
+35,Mild Dehydration,11,Internal Medicine Specialist
+36,Mild Conjunctivitis (Pink Eye),12,Ophthalmologist
+37,Mild Tendonitis,4,Orthopedic Specialist
+38,Common Migraine,6,Neurologist
+39,Mild Sunstroke,1,General Practitioner
+40,Mild Heat Exhaustion,1,General Practitioner
+41,Mild Heat Cramps,4,Orthopedic Specialist
+42,Mild Heat Rash,7,Dermatologist
+43,Common Insomnia,5,Psychiatrist
+44,Common Depression,5,Psychiatrist
+45,Strep Throat,1,General Practitioner
+46,Chronic Fatigue Syndrome,11,Internal Medicine Specialist
+47,Osteoarthritis,4,Orthopedic Specialist
+48,Rheumatoid Arthritis,4,Orthopedic Specialist
+49,Lyme Disease,1,General Practitioner
+50,Chronic Sinusitis,1,General Practitioner
+51,Chronic Bronchitis,10,Pulmonologist
+52,Celiac Disease,3,Gastroenterologist
+53,Chronic Migraine,6,Neurologist
+54,Fibromyalgia,11,Internal Medicine Specialist
+55,Chronic Kidney Disease,13,Nephrologist
+56,Crohn's Disease,3,Gastroenterologist
+57,Ulcerative Colitis,3,Gastroenterologist
+58,Chronic Obstructive Pulmonary Disease (COPD),10,Pulmonologist
+59,Hypothyroidism,14,Endocrinologist
+60,Hyperthyroidism,14,Endocrinologist
+61,Diabetes Type 2,14,Endocrinologist
+62,Hypertension,11,Internal Medicine Specialist
+63,High Cholesterol,11,Internal Medicine Specialist
+64,Tuberculosis,15,Chest Specialist
+65,Chikungunya,1,General Practitioner
+66,Dengue Fever,1,General Practitioner
+67,Malaria,1,General Practitioner
+68,Jaundice,16,Hepatologist
+69,Typhoid Fever,1,General Practitioner
+70,Pneumonia,10,Pulmonologist
+71,Heat Stroke,1,General Practitioner
+72,Heat Exhaustion,1,General Practitioner
+73,Heat Cramps,1,General Practitioner
+74,Gastrointestinal Infections,3,Gastroenterologist
+75,Hepatitis A,16,Hepatologist
+76,Hepatitis B,16,Hepatologist
+77,Hepatitis C,16,Hepatologist
+78,Leptospirosis,1,General Practitioner
+79,Chickenpox,17,Infectious Disease Specialist
+80,Measles,17,Infectious Disease Specialist
+81,Mumps,17,Infectious Disease Specialist
+82,Rubella,17,Infectious Disease Specialist
+83,Tetanus,18,General Surgeon
+84,Rabies,18,General Surgeon
+85,HIV/AIDS,19,Infectious Disease Specialist
+86,Sexually Transmitted Infections (STIs),19,Infectious Disease Specialist
+87,Reproductive Health Issues,20,Gynecologist
+88,Polycystic Ovary Syndrome (PCOS),20,Gynecologist
+89,Endometriosis,20,Gynecologist
+90,Prostate Issues,8,Urologist
+91,Erectile Dysfunction,8,Urologist
+92,Infertility,21,Fertility Specialist
+93,Pregnancy-related Issues,22,Obstetrician
+94,Postpartum Depression,5,Psychiatrist
+95,Childhood Vaccinations,23,Pediatrician
+96,Growth and Developmental Issues in Children,23,Pediatrician
+97,Nutritional Deficiencies,24,Dietitian/Nutritionist
+98,Cardiovascular Diseases,11,Internal Medicine Specialist
+99,Stroke,11,Internal Medicine Specialist
+100,Cancer,25,Medical Oncologist
+101,Alzheimer's Disease,26,Neurologist
+102,Parkinson's Disease,26,Neurologist
+103,Mental Health Disorders,5,Psychiatrist
+104,Skin Infections,7,Dermatologist
+105,Kidney Stones,13,Nephrologist
+106,Liver Cirrhosis,16,Hepatologist
+107,Gallstones,18,General Surgeon
+108,Bladder Infections,8,Urologist
+109,Orthopedic Injuries,4,Orthopedic Specialist
+110,Cervical Spondylosis,4,Orthopedic Specialist
+111,Lumbar Spondylosis,4,Orthopedic Specialist
+112,Varicose Veins,27,Vascular Surgeon
+113,Anemia,11,Internal Medicine Specialist
+114,Chronic Liver Disease,16,Hepatologist
+115,Peripheral Neuropathy,26,Neurologist
+116,Allergic Conjunctivitis,12,Ophthalmologist
+117,Glaucoma,12,Ophthalmologist
+118,Cataracts,12,Ophthalmologist
+119,Earwax Blockage,9,ENT Specialist
+120,Sleep Apnea,10,Pulmonologist
+121,Insulin Resistance,14,Endocrinologist
+122,Lung Cancer,10,Pulmonologist
+123,Breast Cancer,25,Medical Oncologist
+124,Colon Cancer,25,Medical Oncologist
+125,Ovarian Cancer,25,Medical Oncologist

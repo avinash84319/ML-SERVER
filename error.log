@@ -1,0 +1,188 @@
+
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Feb/2024 22:05:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Feb/2024 22:05:17] "POST /text HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Feb/2024 22:05:27] "POST /disease HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Feb/2024 22:05:36] "POST /bestdocs HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 15:56:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 15:56:40] "POST /text HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 15:56:42] "POST /disease HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 15:56:45] "POST /bestdocs HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 15:59:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 16:00:16] "POST /text HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 16:00:21] "POST /disease HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 16:00:24] "POST /bestdocs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 16:00:33] "POST /bestdocs HTTP/1.1" 200 -
+ERROR:root:Error loading tokenizers from disk: [Errno 2] No such file or directory: './Tokenizers/action_tokenizer.pkl'
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:ml-server:Exception on /text [POST]
+Traceback (most recent call last):
+  File "D:\UHS\Super-Search\ml-server.py", line 20, in text
+    action = get_action(data['text'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\UHS\Super-Search\text_funcs.py", line 57, in get_action
+    new_sequences = action_tokenizer.texts_to_sequences(new_queries)
+                    ^^^^^^^^^^^^^^^^
+NameError: name 'action_tokenizer' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\UHS\Super-Search\ml-server.py", line 27, in text
+    logging.error("Error in text(): " + str(e))
+    ^^^^^^^
+NameError: name 'logging' is not defined
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 16:02:05] "[35m[1mPOST /text HTTP/1.1[0m" 500 -
+ERROR:root:Error loading tokenizers from disk: [Errno 2] No such file or directory: './Tokenizers/action_tokenizer.pkl'
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error loading tokenizers from disk: [Errno 2] No such file or directory: './Tokenizers/action_tokenizer.pkl'
+ERROR:root:Error loading tokenizers from disk: [Errno 2] No such file or directory: './Tokenizers/action_tokenizer.pkl'
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error in text(): name 'action_tokenizer' is not defined
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 16:05:09] "[35m[1mPOST /text HTTP/1.1[0m" 500 -
+ERROR:root:Error in text(): name 'action_tokenizer' is not defined
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 16:05:48] "[35m[1mPOST /text HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 16:06:02] "POST /text HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 16:06:16] "POST /disease HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 16:06:20] "POST /bestdocs HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error in bestdocs(): in user code:
+
+    File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\training.py", line 2169, in predict_function  *
+        return step_function(self, iterator)
+    File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\training.py", line 2155, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\training.py", line 2143, in run_step  **
+        outputs = model.predict_step(data)
+    File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\training.py", line 2111, in predict_step
+        return self(x, training=False)
+    File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Input 0 of layer "model" is incompatible with the layer: expected shape=(None, 6), found shape=(None, 7)
+
+INFO:werkzeug:127.0.0.1 - - [12/Feb/2024 14:49:28] "[35m[1mPOST /bestdocs HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Feb/2024 14:50:13] "POST /bestdocs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Feb/2024 14:50:27] "POST /disease HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Feb/2024 14:50:31] "POST /text HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [12/Feb/2024 16:30:06] "[31m[1mGET /timepred HTTP/1.1[0m" 405 -
+ERROR:root:Error in timepred(): in user code:
+
+    File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\training.py", line 2169, in predict_function  *
+        return step_function(self, iterator)
+    File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\training.py", line 2155, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\training.py", line 2143, in run_step  **
+        outputs = model.predict_step(data)
+    File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\training.py", line 2111, in predict_step
+        return self(x, training=False)
+    File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Input 0 of layer "sequential_4" is incompatible with the layer: expected shape=(None, 8), found shape=(None, 1, 8)
+
+INFO:werkzeug:127.0.0.1 - - [12/Feb/2024 16:30:12] "[35m[1mPOST /timepred HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [12/Feb/2024 16:30:58] "POST /timepred HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Feb/2024 16:31:36] "POST /timepred HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [13/Feb/2024 15:19:02] "POST /disease HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error in disease(): in user code:
+
+    File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\training.py", line 2169, in predict_function  *
+        return step_function(self, iterator)
+    File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\training.py", line 2155, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\training.py", line 2143, in run_step  **
+        outputs = model.predict_step(data)
+    File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\training.py", line 2111, in predict_step
+        return self(x, training=False)
+    File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Input 0 of layer "sequential" is incompatible with the layer: expected shape=(None, 78), found shape=(None, 55)
+
+INFO:werkzeug:127.0.0.1 - - [13/Feb/2024 15:20:55] "[35m[1mPOST /disease HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error in disease(): Object of type int64 is not JSON serializable
+INFO:werkzeug:127.0.0.1 - - [13/Feb/2024 15:21:46] "[35m[1mPOST /disease HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [13/Feb/2024 15:23:16] "POST /disease HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [13/Feb/2024 15:24:10] "POST /disease HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error in disease(): Object of type DataFrame is not JSON serializable
+INFO:werkzeug:127.0.0.1 - - [13/Feb/2024 15:30:20] "[35m[1mPOST /disease HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [13/Feb/2024 15:31:04] "POST /disease HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error in disease(): unsupported operand type(s) for -: 'list' and 'int'
+INFO:werkzeug:127.0.0.1 - - [13/Feb/2024 15:32:26] "[35m[1mPOST /disease HTTP/1.1[0m" 500 -
+ERROR:root:Error in disease(): unsupported operand type(s) for -: 'list' and 'int'
+INFO:werkzeug:127.0.0.1 - - [13/Feb/2024 15:32:31] "[35m[1mPOST /disease HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [13/Feb/2024 15:33:06] "POST /disease HTTP/1.1" 200 -

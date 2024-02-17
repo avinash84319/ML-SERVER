@@ -1,7 +1,8 @@
 from flask import Flask, request, jsonify
 import logging
 from text_funcs import get_action, get_location, get_when, get_disease
-from rec_funcs import get_bestdocs
+from doc_rec_funcs import get_bestdocs
+from hos_rec_funcs import get_besthos
 from time_funcs import get_time
 
 
@@ -14,7 +15,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     try:
-        return 'Hello Welcome to the ML Server for the super search', 200
+        return 'Hello Welcome to the ML Server for ', 200
     except Exception as e:
         logging.error("Error in index(): " + str(e))
         return 'Internal Server Error', 500
@@ -52,6 +53,17 @@ def bestdocs():
         bestdocs = get_bestdocs(data['patient_info'])
 
         return jsonify({'bestdocs': bestdocs}), 200
+    except Exception as e:
+        logging.error("Error in bestdocs(): " + str(e))
+        return 'Internal Server Error', 500
+
+@app.route('/besthos', methods=['POST'])
+def besthos():
+    try:
+        data = request.get_json()
+        besthos = get_besthos(data['patient_info'])
+
+        return jsonify({'besthos': besthos}), 200
     except Exception as e:
         logging.error("Error in bestdocs(): " + str(e))
         return 'Internal Server Error', 500

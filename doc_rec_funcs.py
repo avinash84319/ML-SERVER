@@ -30,7 +30,7 @@ def get_bestdocs(patient_info):
     ypred=np.argmax(ypred,axis=1)
     sorted_index=np.argsort(ypred)
     final_doctors_list=data_doctors.iloc[sorted_index]
-    final_doctors_list=final_doctors_list[final_doctors_list['Doctor Location']==patient_info[2]]
+    final_doctors_list=final_doctors_list[final_doctors_list['Doctor Location']<25]
     final_doctors_list=final_doctors_list['Doctor ID'].values
     final_doctors_list=list(final_doctors_list)
     for i in range(len(final_doctors_list)):

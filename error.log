@@ -186,3 +186,90 @@ INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a
  * Running on http://127.0.0.1:5000
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:werkzeug:127.0.0.1 - - [13/Feb/2024 15:33:06] "POST /disease HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [13/Feb/2024 16:12:23] "POST /bestdocs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Feb/2024 16:12:27] "POST /timepred HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Feb/2024 16:12:31] "POST /disease HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Feb/2024 16:12:34] "POST /text HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Feb/2024 16:12:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [13/Feb/2024 16:22:04] "POST /disease HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Feb/2024 16:23:51] "POST /text HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2024 17:17:17] "GET / HTTP/1.1" 200 -
+ERROR:root:Error in bestdocs(): 'Doctor Location'
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2024 17:24:00] "[35m[1mPOST /besthos HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2024 17:26:12] "POST /besthos HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2024 17:37:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2024 17:37:08] "POST /text HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2024 17:37:20] "POST /disease HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2024 17:37:34] "POST /bestdocs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2024 17:37:46] "POST /timepred HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2024 17:37:53] "POST /besthos HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2024 17:45:31] "POST /besthos HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2024 17:45:57] "POST /bestdocs HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2024 17:46:58] "POST /bestdocs HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2024 19:30:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Feb/2024 19:30:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-007-484
+INFO:werkzeug:127.0.0.1 - - [21/Feb/2024 18:08:16] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:7000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-007-484
+INFO:werkzeug:127.0.0.1 - - [21/Feb/2024 18:08:47] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Feb/2024 18:09:16] "POST /mlapi/text HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Feb/2024 18:09:36] "POST /mlapi/disease HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Feb/2024 18:09:50] "POST /mlapi/bestdocs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Feb/2024 18:10:04] "POST /mlapi/timepred HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Feb/2024 18:10:22] "POST /mlapi/timepred HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Feb/2024 18:10:45] "POST /mlapi/besthos HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'd:\\UHS\\Ml-Server\\doc_rec_funcs.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:7000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-007-484
+INFO:werkzeug:127.0.0.1 - - [21/Feb/2024 20:21:07] "POST /mlapi/timepred HTTP/1.1" 200 -

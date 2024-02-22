@@ -54,7 +54,7 @@ except Exception as e:
 
 # import disease data
 
-disease_data = pd.read_csv('./Data/Disease_DOC_Type.csv')
+disease_data = pd.read_csv('./data/Disease_DOC_Type.csv')
 
 def get_action(new_queries):
 

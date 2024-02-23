@@ -21,7 +21,7 @@ def index():
         return 'Hello Welcome to the ML Server for ', 200
     except Exception as e:
         logging.error("Error in index(): " + str(e))
-        return 'Internal Server Error', 500
+        return str(e), 500
 
 @app.route('/text', methods=['POST'])
 def text():
@@ -35,7 +35,7 @@ def text():
         return jsonify({'action': action, 'location': location, 'when': when}), 200
     except Exception as e:
         logging.error("Error in text(): " + str(e))
-        return 'Internal Server Error', 500
+        return str(e), 500
 
 @app.route('/disease', methods=['POST'])
 def disease():
@@ -46,7 +46,7 @@ def disease():
         return jsonify({'Cases': disease}), 200
     except Exception as e:
         logging.error("Error in disease(): " + str(e))
-        return 'Internal Server Error', 500
+        return str(e), 500
 
 
 @app.route('/bestdocs', methods=['POST'])
@@ -59,7 +59,7 @@ def bestdocs():
         return jsonify({'bestdocs': bestdocs}), 200
     except Exception as e:
         logging.error("Error in bestdocs(): " + str(e))
-        return 'Internal Server Error', 500
+        return str(e), 500
 
 @app.route('/besthos', methods=['POST'])
 def besthos():
@@ -70,7 +70,7 @@ def besthos():
         return jsonify({'besthos': besthos}), 200
     except Exception as e:
         logging.error("Error in bestdocs(): " + str(e))
-        return 'Internal Server Error', 500
+        return str(e), 500
 
 
 @app.route('/timepred', methods=['POST'])
@@ -82,7 +82,7 @@ def timepred():
         return jsonify({'time_mins':time}), 200
     except Exception as e:
         logging.error("Error in timepred(): " + str(e))
-        return 'Internal Server Error', 500
+        return str(e), 500
 
 @app.route('/mlapi/text', methods=['POST'])
 def mlapitext():
@@ -96,7 +96,7 @@ def mlapitext():
         return jsonify({'action': action, 'location': location, 'when': when}), 200
     except Exception as e:
         logging.error("Error in text(): " + str(e))
-        return 'Internal Server Error', 500
+        return str(e), 500
 
 @app.route('/mlapi/disease', methods=['POST'])
 def mlapidisease():
@@ -119,7 +119,7 @@ def mlapidisease():
         return jsonify({'Cases': disease,'Docs_for_Cases':bestdocs}), 200
     except Exception as e:
         logging.error("Error in disease(): " + str(e))
-        return 'Internal Server Error', 500
+        return str(e), 500
 
 
 @app.route('/mlapi/bestdocs', methods=['POST'])
@@ -136,7 +136,7 @@ def mlapibestdocs():
         return jsonify({'bestdocs': bestdocs}), 200
     except Exception as e:
         logging.error("Error in bestdocs(): " + str(e))
-        return 'Internal Server Error', 500
+        return str(e), 500
 
 @app.route('/mlapi/besthos', methods=['POST'])
 def mlapibesthos():
@@ -151,7 +151,7 @@ def mlapibesthos():
         return jsonify({'besthos': besthos}), 200
     except Exception as e:
         logging.error("Error in bestdocs(): " + str(e))
-        return 'Internal Server Error', 500
+        return str(e), 500
 
 
 @app.route('/mlapi/timepred', methods=['POST'])
@@ -163,7 +163,7 @@ def mlapitimepred():
         return jsonify({'time_mins':time}), 200
     except Exception as e:
         logging.error("Error in timepred(): " + str(e))
-        return 'Internal Server Error', 500
+        return str(e), 500
 
 
 if __name__ == '__main__':

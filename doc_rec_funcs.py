@@ -41,13 +41,13 @@ def get_bestdocs(patient_info):
     return final_doctors_list
 
 
-def get_bestdocs_constraints(patient_info, constraints):
+def get_bestdocs_constraints(patient_info, constraints , next_req):
     try:
         # hospital for 0 and direct doctor for 1
         if next_req == 1:
-            data_doctors = requests.post('http://localhost:3000/api/doctor/doctorRecommenderSystemInfo', json={'constraints': constraints})['data']
+            data_doctors = requests.post('http://host.internal.docker:3000/api/doctor/doctorRecommenderSystemInfo', json={'constraints': constraints})['data']
         else:
-            data_doctors = requests.post('http://localhost:8000/api/hospital/doctorRecommenderSystemInfo', json={'constraints': constraints})['data']
+            data_doctors = requests.post('http://host.internal.docker:8000/api/hospital/doctorRecommenderSystemInfo', json={'constraints': constraints})['data']
         
         data_patients = [patient_info for i in range(len(data_doctors))]
         data_patients = np.array(data_patients)

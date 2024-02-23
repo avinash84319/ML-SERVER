@@ -42,7 +42,7 @@ def get_besthos(patient_info):
 def get_besthos_constraints(patient_info,constraints):
 
     # get hospitals based on constraints
-    data_hospital=requests.post('http://localhost:3000/api/doctor/doctorRecommenderSystemInfo', json={'constraints': constraints})['data']
+    data_hospital=requests.post('http://host.internal.docker:8000/api/hospital/hospitalRecommenderSystemInfo', json={'constraints': constraints})['data']
     
     data_patients=[patient_info for i in range(len(data_hospital))]
     data_patients=np.array(data_patients)

@@ -300,3 +300,51 @@ INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 289-803-531
 INFO:werkzeug: * Detected change in 'd:\\UHS\\Ml-Server\\hos_rec_funcs.py', reloading
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:7000
+ * Running on http://10.24.60.129:7000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error in get_bestdocs_constraints: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /api/hospital/doctorRecommenderSystemInfo (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001CD92E3D690>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+INFO:werkzeug:127.0.0.1 - - [23/Feb/2024 12:55:29] "POST /mlapi/bestdocs HTTP/1.1" 200 -
+ERROR:root:Error in disease(): int() argument must be a string, a bytes-like object or a real number, not 'dict'
+INFO:werkzeug:127.0.0.1 - - [23/Feb/2024 12:56:01] "[35m[1mPOST /mlapi/disease HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:7000
+ * Running on http://10.24.60.129:7000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error in disease(): 0
+INFO:werkzeug:127.0.0.1 - - [23/Feb/2024 13:00:50] "[35m[1mPOST /mlapi/disease HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:7000
+ * Running on http://10.24.60.129:7000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:7000
+ * Running on http://10.24.60.129:7000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/Feb/2024 13:25:39] "POST /mlapi/timepred HTTP/1.1" 200 -
+ERROR:root:Error in get_bestdocs_constraints: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /api/hospital/doctorRecommenderSystemInfo (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002697B7BDF50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+ERROR:root:Error in disease(): list index out of range
+INFO:werkzeug:127.0.0.1 - - [23/Feb/2024 13:25:49] "[35m[1mPOST /mlapi/disease HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:7000
+ * Running on http://10.24.60.129:7000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:diseases[18, 28]
+ERROR:root:Error in get_bestdocs_constraints: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /api/hospital/doctorRecommenderSystemInfo (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000250C744AD10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+ERROR:root:Error in disease(): list index out of range
+INFO:werkzeug:127.0.0.1 - - [23/Feb/2024 14:20:40] "[35m[1mPOST /mlapi/disease HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:7000
+ * Running on http://10.24.60.129:7000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:patient_info[[18, 47, 1, 18, 2, 188], [18, 47, 1, 28, 10, 188]]
+ERROR:root:Error in get_bestdocs_constraints: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /api/hospital/doctorRecommenderSystemInfo (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020CF42A4350>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+ERROR:root:Error in disease(): list index out of range
+INFO:werkzeug:127.0.0.1 - - [23/Feb/2024 14:22:10] "[35m[1mPOST /mlapi/disease HTTP/1.1[0m" 500 -

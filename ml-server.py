@@ -1,7 +1,8 @@
 from flask import Flask, request, jsonify
 import pandas as pd
 import logging
-from text_funcs import get_action, get_location, get_when, get_disease
+import requests
+from text_funcs import get_action, get_location, get_when, get_disease ,get_disease_constraints
 from doc_rec_funcs import get_bestdocs,get_bestdocs_constraints
 from hos_rec_funcs import get_besthos,get_besthos_constraints
 from time_funcs import get_time
@@ -15,13 +16,21 @@ app = Flask(__name__)
 # data import for mapping disease type to docter type
 dis_doc_map=pd.read_csv('./data/Disease_DOC_Type.csv')
 
+# test the connection to the other services
+
+try:
+    print(requests.get('http://host.docker.internal:3000/api/doctor/'))
+    print(requests.get('http://host.internal.docker:8000/api/hospital/'))
+except Exception as e:
+    logging.error("Error connecting to other services: " + str(e))
+
 @app.route('/')
 def index():
     try:
         return 'Hello Welcome to the ML Server for ', 200
     except Exception as e:
         logging.error("Error in index(): " + str(e))
-        return str(e), 500
+        return jsonify({'eroor':str(e)}), 500
 
 @app.route('/text', methods=['POST'])
 def text():
@@ -35,7 +44,7 @@ def text():
         return jsonify({'action': action, 'location': location, 'when': when}), 200
     except Exception as e:
         logging.error("Error in text(): " + str(e))
-        return str(e), 500
+        return jsonify({'eroor':str(e)}), 500
 
 @app.route('/disease', methods=['POST'])
 def disease():
@@ -46,7 +55,7 @@ def disease():
         return jsonify({'Cases': disease}), 200
     except Exception as e:
         logging.error("Error in disease(): " + str(e))
-        return str(e), 500
+        return jsonify({'eroor':str(e)}), 500
 
 
 @app.route('/bestdocs', methods=['POST'])
@@ -59,7 +68,7 @@ def bestdocs():
         return jsonify({'bestdocs': bestdocs}), 200
     except Exception as e:
         logging.error("Error in bestdocs(): " + str(e))
-        return str(e), 500
+        return jsonify({'eroor':str(e)}), 500
 
 @app.route('/besthos', methods=['POST'])
 def besthos():
@@ -70,7 +79,7 @@ def besthos():
         return jsonify({'besthos': besthos}), 200
     except Exception as e:
         logging.error("Error in bestdocs(): " + str(e))
-        return str(e), 500
+        return jsonify({'eroor':str(e)}), 500
 
 
 @app.route('/timepred', methods=['POST'])
@@ -82,7 +91,7 @@ def timepred():
         return jsonify({'time_mins':time}), 200
     except Exception as e:
         logging.error("Error in timepred(): " + str(e))
-        return str(e), 500
+        return jsonify({'eroor':str(e)}), 500
 
 @app.route('/mlapi/text', methods=['POST'])
 def mlapitext():
@@ -95,14 +104,14 @@ def mlapitext():
 
         return jsonify({'action': action, 'location': location, 'when': when}), 200
     except Exception as e:
-        logging.error("Error in text(): " + str(e))
-        return str(e), 500
+        logging.error("Error in mlapitext(): " + str(e))
+        return jsonify({'eroor':str(e)}), 500
 
 @app.route('/mlapi/disease', methods=['POST'])
 def mlapidisease():
     try:
         data = request.get_json()
-        disease = get_disease(data['text'])
+        disease = get_disease_constraints(data['text'])
         patient_info=data['patient_info']
         constraints=data['constraints']
         next_req=data['next_req']
@@ -110,16 +119,17 @@ def mlapidisease():
         # upade patient info based on disease assuming last doctor type and patient health condition to based on disease
         for i in range(len(patient_info)):
             patient_info[i][3]=int(disease[i])
-            patient_info[i][4]=int(dis_doc_map[dis_doc_map['Disease']==disease[i]]['Doctor_Type_ID'].values[0])
+            patient_info[i][4]=int(dis_doc_map[dis_doc_map['Disease_ID']==disease[i]]['Doctor_Type_ID'].values[0])
 
+        logging.error("patient_info"+str(patient_info))
         bestdocs =  []
         for i in range(len(patient_info)):
             bestdocs.append(get_bestdocs_constraints(patient_info[i],constraints[i],next_req[i]))
 
         return jsonify({'Cases': disease,'Docs_for_Cases':bestdocs}), 200
     except Exception as e:
-        logging.error("Error in disease(): " + str(e))
-        return str(e), 500
+        logging.error("Error in mlapidisease(): " + str(e))
+        return jsonify({'eroor':str(e)}), 500
 
 
 @app.route('/mlapi/bestdocs', methods=['POST'])
@@ -135,8 +145,8 @@ def mlapibestdocs():
 
         return jsonify({'bestdocs': bestdocs}), 200
     except Exception as e:
-        logging.error("Error in bestdocs(): " + str(e))
-        return str(e), 500
+        logging.error("Error in mlapibestdocs(): " + str(e))
+        return jsonify({'eroor':str(e)}), 500
 
 @app.route('/mlapi/besthos', methods=['POST'])
 def mlapibesthos():
@@ -150,8 +160,8 @@ def mlapibesthos():
 
         return jsonify({'besthos': besthos}), 200
     except Exception as e:
-        logging.error("Error in bestdocs(): " + str(e))
-        return str(e), 500
+        logging.error("Error in mlapibestdocs(): " + str(e))
+        return jsonify({'eroor':str(e)}), 500
 
 
 @app.route('/mlapi/timepred', methods=['POST'])
@@ -162,8 +172,8 @@ def mlapitimepred():
 
         return jsonify({'time_mins':time}), 200
     except Exception as e:
-        logging.error("Error in timepred(): " + str(e))
-        return str(e), 500
+        logging.error("Error in mlapitimepred(): " + str(e))
+        return jsonify({'eroor':str(e)}), 500
 
 
 if __name__ == '__main__':

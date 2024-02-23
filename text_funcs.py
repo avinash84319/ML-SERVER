@@ -37,16 +37,16 @@ except Exception as e:
 
 try:
     # load the label encoders from disk
-    with open('./Label_Encoders/action_label_encoder.pkl', 'rb') as handle:
+    with open('./Label_encoders/action_label_encoder.pkl', 'rb') as handle:
         action_label_encoder = pickle.load(handle)
 
-    with open('./Label_Encoders/location_label_encoder.pickle', 'rb') as handle:
+    with open('./Label_encoders/location_label_encoder.pickle', 'rb') as handle:
         location_label_encoder = pickle.load(handle)
 
-    with open('./Label_Encoders/when_label_encoder.pickle', 'rb') as handle:
+    with open('./Label_encoders/when_label_encoder.pickle', 'rb') as handle:
         when_label_encoder = pickle.load(handle)
 
-    with open('./Label_Encoders/disease_label_encoder.pickle', 'rb') as handle:
+    with open('./Label_encoders/disease_label_encoder.pickle', 'rb') as handle:
         disease_label_encoder = pickle.load(handle)
 except Exception as e:
     logging.error("Error loading label encoders from disk: " + str(e))
@@ -95,4 +95,13 @@ def get_disease(new_queries):
         predicted_classes[i] = int(predicted_classes[i])-1               # subtract 1 from each value to get the correct index
     predicted_classes = disease_data.iloc[predicted_classes]
     predicted_classes = predicted_classes.to_dict(orient='records')
+    return predicted_classes
+
+def get_disease_constraints(new_queries):
+
+    new_sequences = disease_tokenizer.texts_to_sequences(new_queries)
+    new_padded_sequences = pad_sequences(new_sequences, maxlen=78)       # maxlen is the max length of the sequence but make it also automatic find a way
+    predictions = disease_model.predict(new_padded_sequences)
+    predicted_classes = [disease_label_encoder.classes_[tf.argmax(prediction).numpy()] for prediction in predictions]
+    predicted_classes = list(predicted_classes)
     return predicted_classes

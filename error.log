@@ -348,3 +348,11 @@ ERROR:root:patient_info[[18, 47, 1, 18, 2, 188], [18, 47, 1, 28, 10, 188]]
 ERROR:root:Error in get_bestdocs_constraints: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /api/hospital/doctorRecommenderSystemInfo (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020CF42A4350>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
 ERROR:root:Error in disease(): list index out of range
 INFO:werkzeug:127.0.0.1 - - [23/Feb/2024 14:22:10] "[35m[1mPOST /mlapi/disease HTTP/1.1[0m" 500 -
+ERROR:root:Error connecting to other services: HTTPConnectionPool(host='host.docker.internal', port=3000): Max retries exceeded with url: /api/doctor/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000023912569550>, 'Connection to host.docker.internal timed out. (connect timeout=None)'))
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error connecting to other services: HTTPConnectionPool(host='host.docker.internal', port=3000): Max retries exceeded with url: /api/doctor/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000193632EBFD0>, 'Connection to host.docker.internal timed out. (connect timeout=None)'))
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
